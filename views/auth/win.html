@@ -1,0 +1,20 @@
+{% extends 'layouts/main1.html' %}
+{% block title %} Auth {% endblock %}
+{% block rightbar %} 
+	<!-- by default comes empty -->
+{% endblock %}
+{% block header %}  Logged OK! {% endblock %}
+
+
+
+{% block content %}
+<h2>Should redirect somewhere now...</h2>
+<p>
+	If it was the signup, congratz, you won!<br/>
+	If it is a login, samewise!
+</p>
+<p>
+	<a href="/auth/logout">..you may logout</a>
+</p>
+
+{% endblock %}

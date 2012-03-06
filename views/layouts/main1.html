@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>The Login-Signup App!</title>
+
+<link rel="stylesheet" href="/stylesheets/screen.css"/>
+
+<!-- condense all scripts in one -->
+<script type="text/javascript" src="/javascript/jquery171.js"></script>
+<script type="text/javascript" src="/javascript/jquery.DOMWindow.js"></script>
+
+<script type="text/javascript" src="/javascript/main.js"></script>
+
+</head>
+
+<body>
+<div id="header">
+	<div id="headerContent">
+	<div id="logo">
+		<a href="/" />
+    	</a>
+    </div>	
+    <div id="navSearch">
+    		<form action="/search/do" method="GET">
+	
+			<div id="searchbarheader">
+				========================&gt;
+			</div>	
+			
+			</form>
+    </div>
+    <div id="about">
+    	<nav>
+        {% if welcome_login %}
+            {{ welcome_login }}
+        {% else %}
+            <a href="/auth/popover#signInContainer" class="popup">Sign in</a><a href="/auth/popover#signUpContainer" class="popup">Create an account</a>
+      	{% endif %}
+      </nav>
+    </div>
+    </div>
+</div>
+
+<div class="upperContainer">
+</div>
+
+<div class="container"> 
+	
+  <div class="rightBar">
+    <div style="clear:both;"></div>
+  </div>
+		
+    <section>
+    <div class="content">
+      <article>
+        {% block content %}{% endblock %}
+      </article>
+      <div style="clear:both;"></div>
+    </div>
+    </section>
+    
+</div>
+
+</body>
+</html>
+

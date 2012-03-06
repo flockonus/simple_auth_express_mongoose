@@ -1,0 +1,249 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+	background-repeat:no-repeat;
+	background-color:#ffffff;
+	margin: 0 auto;
+	background-position: top center;
+	font-family: 'Cabin Condensed', sans-serif;
+}
+
+h1 {
+	font-family: 'Cabin Condensed', sans-serif;
+	margin: 0px;
+	padding: 0px 0px 10px 0px;
+	font-size: 2.5em;
+	font-weight: normal;
+}
+
+h2 {
+	font-family: 'Cabin Condensed', sans-serif;
+	margin: 0px;
+	padding: 0px;
+	font-size: 2.0em;
+	font-weight: normal;
+
+}
+
+h3 {
+	font-family: 'Cabin Condensed', sans-serif;
+	margin: 0px;
+	padding: 0px;
+	font-size: 1.5em;
+	font-weight: normal;
+}
+
+h4 {
+	font-family: 'Cabin Condensed', sans-serif;
+	margin: 0px;
+	padding: 0px;
+	font-size: 1.2em;
+	font-weight: normal;
+}
+
+ul {
+	padding:0px;
+	margin: 0px;
+}
+
+li {
+	padding: 0px;
+	margin: 0px;
+}
+
+a:link {
+	text-decoration: none;
+	color: #FFCC00;
+	font-family: 'Cabin Condensed', sans-serif;
+	font-weight: normal;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+
+
+/* LOGIN SIGNUP */
+
+/*.popoverBg {
+	z-index: 100;
+	background-color: rgba(0, 0, 0, 0.7);
+	width: 440px;
+	height: 440px;
+	padding: 30px;
+}*/
+
+.popoverContent {
+	z-index: 110;
+	/*background-color: #ffffff;*/
+	width: 420px;
+	height: 300px;
+}
+
+.closeLink {
+	background-color:#ebebeb;
+	position: absolute;
+	width: 97%;
+	top: 300px;
+	text-align:center;
+	padding:4px;
+	border:1px dotted #370470;
+	cursor:pointer;
+}
+
+.closeLink a {
+	color: #370470;
+	padding: 4px 6px;
+	width: 300px;
+	
+}
+
+#signInContainer {
+	display:none;
+}
+
+#signUpContainer {
+	display:none;
+}
+
+#authContainers {
+	padding: 0px;
+	margin: 0px;
+}
+
+#authContainers > li:target {
+	display: list-item;
+	list-style:none;
+	list-style-type:none;
+}
+
+.authTabs {
+	list-style-type: none;
+	margin: 0;
+	padding: 0px 0 10px 20px;
+	border-bottom:1px solid #999999;
+}
+
+.authTabs li {
+	display:inline;
+	margin-right: 10px;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.authTabs img {
+	margin-bottom: -10px;
+}
+
+.authTabs > .tab {
+	padding: 0px 10px 0px 0px;
+	border-right: 1px solid #999999;
+	margin-top:-10px;
+}
+
+.authTabs > .tab > a {
+	font-family: 'Cabin Condensed', sans-serif;
+	color:#370470;
+	font-size: 18px;
+	text-decoration:none;
+	font-weight: normal;
+}
+
+.signIn {
+	margin: 20px 0px 0px 20px;
+	padding:0px;
+}
+
+.signIn h2 {
+	color: #333333;
+	font-family: 'Cabin Condensed',sans-serif;
+    font-size: 2em;
+    margin: 0px 0px 20px 0px;
+    padding: 0;
+	font-weight: normal;
+}
+
+#signInEmail {
+	font-size: 1.5em;
+	width: 80%;
+}
+
+#signInPassword {
+	font-size: 1.5em;
+	width: 50%;
+}
+
+.signIn a {
+	color:#370470;
+	padding: 0px 0px 4px 10px;
+}
+
+.signUp {
+	margin: 20px 0px 0px 20px;
+	padding:0px;
+}
+
+.signUp h2 {
+	color: #333333;
+	font-family: 'Cabin Condensed',sans-serif;
+    font-size: 2em;
+    margin: 0px 0px 20px 0px;
+    padding: 0;
+	font-weight: normal;
+}
+
+#signUpEmail {
+	font-size: 1.5em;
+	width: 80%;
+}
+
+#signUpPassword {
+	font-size: 1.5em;
+	width: 50%;
+}
+
+.signIn a {
+	color:#370470;
+	padding: 0px 0px 4px 10px;
+	font-family: 'Cabin Condensed',sans-serif;
+	text-decoration:none;
+}
+
+button {
+	-moz-box-shadow:inset 0px 1px 0px 0px #8cff96;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #8cff96;
+	box-shadow:inset 0px 1px 0px 0px #8cff96;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #3ae67f), color-stop(1, #2b9e55) );
+	background:-moz-linear-gradient( center top, #3ae67f 5%, #2b9e55 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#3ae67f', endColorstr='#2b9e55');
+	background-color:#3ae67f;
+	/* -moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px; */
+	border:1px solid #278527;
+	display:inline-block;
+	color:#ffffff;
+	font-size:22px;
+	font-weight:bold;
+	padding:7px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #828282;
+	vertical-align: top;
+	font-family: 'Cabin Condensed', sans-serif;
+
+}
+
+button:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #2b9e55), color-stop(1, #3ae67f) );
+	background:-moz-linear-gradient( center top, #2b9e55 5%, #3ae67f 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#2b9e55', endColorstr='#3ae67f');
+	background-color:#2b9e55;
+	cursor:pointer;
+}
+
+button:active {
+	position:relative;
+	top:1px;
+}

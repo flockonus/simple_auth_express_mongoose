@@ -1,0 +1,73 @@
+{% extends 'layouts/popover.html' %}
+{% block onload %}
+
+
+<script type="text/javascript" charset="utf-8">
+function onLoad(){
+    $p = window.parent || parent
+    // need to detect if this is a real popover
+    if( $p && $p.GW ){
+        j = $p.j
+        // TODO an ajax request to rig the next response to open in this iframe
+        // FIXME setTimeout( function(){ j('a[href="#signInContainer"]', document).click() }, 300 )
+        j('.closeLink', document).closeDOMWindow({eventType:'click'});
+        
+        j('.provider', document).click(function(e){
+          $p.GW.Main.providerRedirect( j(e.currentTarget).attr('href') )
+        })
+    }
+    
+    // when any either login/signup is errored have to show this message!
+    if( '{{erroredForm}}' ){
+        console.log('errored!!')
+        window.location.href = window.location.href+'#{{erroredForm}}Container'
+    }
+}
+</script>
+
+{% endblock %}
+{% block content %}
+
+
+<!-- <div class="popoverBg"> -->
+<div class="popoverContent">
+    <ul class="authTabs">
+        <li class="tab"><a href="#signInContainer">Sign in</a></li>
+        <li class="tab"><a href="#signUpContainer">Create an account</a></li>
+    </ul>
+    <ul id="authContainers">
+        <li id="signInContainer">
+            <div class="signIn">
+                <h2>Sign in to Gamewiser</h2>
+                {% autoescape off %}
+                   {{ signin_errors }}
+                {% endautoescape %}
+                <form action="/auth/classic-login" method="post" class="signInForm">
+                    <p><input id="signInEmail" name="email" placeholder="Enter email address..." type="text" value="{{email}}"></p>
+                    <p><input id="signInPassword" name="pass" placeholder="Enter password..." type="password"><a class="forgotPass" href="#">Forgot password?</a></p>
+                    
+                    <button>Sign in</button>
+                
+                </form>
+            </div>
+        </li>
+        <li id="signUpContainer">
+            <div class="signUp">
+                <h2>Create a Gamewiser account</h2>
+                {% autoescape off %}
+                   {{ signup_errors }}
+                {% endautoescape %}
+                <form action="/auth/classic-signup" method="post" class="signInForm">
+                    <p><input id="signInUsername" name="nick" placeholder="Enter screen name..." type="text" value="{{u.nick}}"></p>
+                    <p><input id="signInEmail" name="email" placeholder="Enter email address..." type="text" value="{{u.email}}"></p>
+                    <p><input id="signInPassword" name="pass" placeholder="Create password..." type="password" value=""></p>
+                    
+                    <button>Create account</button>
+                
+                </form>
+            </div>
+        </li>
+     </ul>
+</div>
+<!-- </div> -->
+{% endblock %}

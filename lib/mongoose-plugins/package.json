@@ -1,0 +1,24 @@
+{ "name": "mongoose-plugins"
+, "description": "Plugins for Mongoose on NodeJS"
+, "maintainers":
+  [ { "name": "Charles Davison"
+    , "web": "https://github.com/powmedia"
+    }
+  ]
+, "contributors" :
+  [ { "name": "Charles Davison"
+    , "web": "https://github.com/powmedia"
+    }
+  ]
+, "version": "0.1"
+, "repository" :
+  { "type" : "git"
+  , "url" : "http://github.com/powmedia/mongoose-plugins.git"
+  }
+, "bugs" : { "web" : "http://github.com/powmedia/mongoose-plugins/issues" }
+, "licenses" :
+  [ { "type" : "MIT"
+    , "url" : "http://github.com/powmedia/mongoose-plugins/raw/master/LICENSE"
+    }
+  ]
+}

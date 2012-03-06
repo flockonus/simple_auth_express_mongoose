@@ -1,0 +1,7 @@
+.DS_Store
+npm-debug.log
+node_modules/*
+dist/browser/*
+dist/test/swig.pack.js
+dist/test/*.test.js
+*~

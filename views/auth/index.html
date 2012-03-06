@@ -1,0 +1,25 @@
+{% extends 'layouts/main.html' %}
+{% block title %} Auth {% endblock %}
+{% block rightbar %} 
+	<!-- by default comes empty -->
+{% endblock %}
+{% block header %} GameWiser // Auth {% endblock %}
+
+
+
+{% block content %}
+<h2>Login/Signup</h2>
+<a href="/auth/twitter"><img src="/icons/twitter.png" alt="TWITTER" /></a>, 
+<a href="/auth/facebook"><img src="/icons/facebook.png" alt="FACEBOOK" /></a>, 
+<a href="/auth/google"><img src="/icons/google.png" alt="GOOGLE" /></a>, 
+<br/>
+field<br/>
+field<br/>
+field {{foo.bar}}<br/>
+
+
+<hr/>
+
+<a target="_blank" onclick="return confirm('confirm')" href="/auth/reset_users">Delete All accounts --only do so if you are loggedout!</a>
+
+{% endblock %}

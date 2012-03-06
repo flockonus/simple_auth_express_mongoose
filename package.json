@@ -1,0 +1,11 @@
+{
+    "name": "simple_auth_express_mongoose"
+  , "version": "0.1.0"
+  , "private": true
+  , "dependencies": {
+      "express": "2.5.1"
+    , "mongoose": "2.4.10"
+    , "underscore": ">= 1.1.7"
+    , "jshashes": "0.1.3b"
+  }
+}

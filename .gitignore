@@ -1,0 +1,9 @@
+*~
+.project
+.redcar
+node_modules/*
+node_modules/express
+node_modules/mongoose
+node_modules/stache
+node_modules/.bin
+*.password

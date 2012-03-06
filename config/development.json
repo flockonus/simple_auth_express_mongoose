@@ -1,0 +1,4 @@
+{
+  "mongodb_url": "mongodb://127.0.0.1/simple_auth",
+  "logger": { "format": "dev" }
+}

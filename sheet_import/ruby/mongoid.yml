@@ -1,0 +1,20 @@
+# http://mongoid.org/docs/installation/configuration.html
+# http://www.commonvision.com.au/2010/12/30/tips-for-those-using-rails3-heroku-mongoid-and-mongohq/
+
+defaults: &defaults
+  allow_dynamic_fields: false
+#  autocreate_indexes: true
+  parameterize_keys: true
+  persist_in_safe_mode: true
+  raise_not_found_error: true
+  reconnect_time: 3
+  use_object_ids: true
+  uri: "mongodb://flockonus:rockstar8142@ds029107.mongolab.com:29107/bgr_dev"
+
+development:
+  <<: *defaults
+  
+
+
+
+

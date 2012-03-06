@@ -1,0 +1,52 @@
+{% extends 'layouts/main1.html' %}
+{% block title %} Signup {% endblock %}
+{% block rightbar %}
+   <!-- by default comes empty -->
+{% endblock %}
+{% block header %}  Login via {{ u.provider }} {% endblock %}
+{% block content %}
+     
+<h2>Just fill this fields to finish signup via {{ u.provider }}</h2>
+
+<!-- LIDAR COM ERRORS DE FORMA MANUAL ;D -->
+{% autoescape off %}
+   {{ form_errors }}
+{% endautoescape %}
+
+<!-- FAZER UM FORM AQUI -->
+<form action="/auth/finish_via_provider" method="POST">
+   <p>Name:          <input name="user[nick]" value="{{ u.nick }}" /><br />(displayed on your reviews)</p>
+   <p>Email address: <input name="user[email]" value="{{ u.email }}" /> <br/>(used for notifications only)</p>
+   <!-- may add more fields here<br/> -->
+   <button type="submit">Continue</button>
+</form>
+
+
+{% endblock %}
+
+<!-- 
+{ extends 'layouts/popover.html' }
+{ block onload }
+
+<script type="text/javascript" charset="utf-8">
+function onLoad(){}
+</script>
+
+{ endblock }
+{ block content }
+
+<h2>Complete the following fields to finish your signup via { u.provider }</h2>
+
+{ autoescape off }
+	{ form_errors }
+{ endautoescape }
+
+<form action="/auth/finish_via_provider" method="POST">
+	<p>Name: <input name="user[nick]" value="{ u.nick }" /><br />(displayed on your reviews)</p>
+	<p>Email address: <input name="user[email]" value="{ u.email }" /> <br/>(used for notifications only)</p>
+	< may add more fields here<br/> >
+	<button type="submit">Continue</button>
+</form>
+
+
+{ endblock } -->

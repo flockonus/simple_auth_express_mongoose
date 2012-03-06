@@ -1,0 +1,26 @@
+{% extends 'layouts/popover.html' %}
+{% block onload %}
+
+
+<script type="text/javascript" charset="utf-8">
+function onLoad(){
+    $p = window.parent || parent
+    // need to detect if this is a real popover
+    if( $p && $p.GW ){
+        j = window.parent.j
+        setTimeout( function(){
+            $p.GW.Main.loginCallback( "{{welcome_login}}" )
+            j('.closeLink', document).closeDOMWindow();
+        }, 500)
+        // TODO Also, call some parent function to display Nick Login!
+    }
+}
+</script>
+
+{% endblock %}
+{% block content %}
+
+
+<h1>VICTORY!</h1>
+
+{% endblock %}
