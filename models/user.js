@@ -11,8 +11,8 @@ function encodePassword( pass ){
 }
 
 var UserSchema = new Schema({
-    nick        : {type: String, required: true, unique: true, trim: true } // TODO unique insensitive! && sanitize http://stackoverflow.com/questions/3705356/preventing-xss-in-node-js-server-side-javascript
-  , email       : {type: String, required: true, unique: true, trim: true, lowercase: true } // TODO unique insensitive! && sanitize http://stackoverflow.com/questions/3705356/preventing-xss-in-node-js-server-side-javascript
+    nick        : {type: String, required: true, unique: true, trim: true } 
+  , email       : {type: String, required: true, unique: true, trim: true, lowercase: true } 
   , password    : {type: String, set: encodePassword, required: true }
 });
 

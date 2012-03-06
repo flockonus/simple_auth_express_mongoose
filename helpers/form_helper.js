@@ -1,3 +1,5 @@
+//app.helpers.displayErrors = require('./helpers/form_helper.js').displayErrors
+
 stripErrors = function(mongooseErr){
 	var prop, list = [];
 	for( prop in mongooseErr.errors ){
