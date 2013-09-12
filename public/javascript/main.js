@@ -18,6 +18,7 @@ j = jQuery;
 		window.location.href = url+'/to'
 	};
 	
+	//loaded popup controller openDOMWindow
 	GW.Main.onLoad = function() {
 		// http://swip.codylindley.com/DOMWindowDemo.html
 		$('.popup').openDOMWindow({ 
